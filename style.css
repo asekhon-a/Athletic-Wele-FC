@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+  background: #003366;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0 0 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Header menu styles */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+header nav ul li a:hover {
+  background-color: #1E90FF; /* highlight background */
+  color: #fff; /* text becomes black */
+  transform: scale(1.05); /* slight zoom */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.slogan {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Hero Image */
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+/* Player Roster */
+.player-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.player-card {
+  background: #e0e0e0;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 180px;
+  transition: transform 0.3s;
+}
+
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Achievements Carousel */
+.carousel {
+  position: relative;
+  text-align: center;
+}
+
+.carousel-item {
+  display: none;
+  max-width: 300px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+/* Photo Slider */
+.photo-slider {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.slide {
+  display: none;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.slide.active {
+  display: block;
+}
+
+.photo-slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.photo-slider .prev { left: 10px; }
+.photo-slider .next { right: 10px; }
+
+/* Match Schedule */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Map */
+iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+}
