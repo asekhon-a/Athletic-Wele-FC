@@ -1,0 +1,391 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+ 
+body {
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  padding-top: 120px;
+}
+
+/* Header */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #1E90FF;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+nav ul li a.active{
+  background-color: #1E90FF;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.slogan {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Hero Image */
+.hero img {
+  width: 100%;
+  max-height: 700px;
+  object-fit: cover;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  scroll-margin-top: 120px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.team-slider{
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+.team-slider .slides{
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.team-slider .slide{
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.team-slider .prev, 
+.team-slider .next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.team-slider .prev{ left: 10px;}
+.team-slider .next{right: 10px;}
+
+
+.players{
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.players h2 {
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+
+.player-card {
+  width: 180px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.player-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.player-card h3{
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+.player-card p{
+  font-size: 0.9rem;
+  color: #000;
+}
+
+
+/* Achievements Carousel */
+.carousel {
+  position: relative;
+  text-align: center;
+}
+
+.carousel-item {
+  display: none;
+  max-width: 300px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+/* === Achievements Carousel === */
+#achievements {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+#achievements h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.carousel-item {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.carousel-item.active {
+  display: block;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Prev & Next Buttons */
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 51, 102, 0.8);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+#prev:hover, #next:hover {
+  background: #1E90FF;
+}
+
+#prev { left: 15px; }
+#next { right: 15px; }
+
+/* Fade effect */
+@keyframes fadeIn {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 768px) {
+  #achievements h2 {
+    font-size: 1.6rem;
+  }
+
+  .carousel {
+    max-width: 95%;
+  }
+
+  #prev, #next {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #prev, #next {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+/* Photo Slider */
+.photo-slider {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.slide {
+  display: none;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.slide.active {
+  display: block;
+}
+
+.photo-slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.photo-slider .prev { left: 10px; }
+.photo-slider .next { right: 10px; }
+
+/* Match Schedule */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Map */
+iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+}
+ html{
+   scroll-behavior: smooth;
+ }
+
+ #contact a{
+  color: #1E90FF;
+  text-decoration: none;
+  font-weight: 500;
+ }
+
+ #contact a:hover{
+  text-decoration: underline;
+ }
